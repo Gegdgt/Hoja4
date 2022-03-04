@@ -1,4 +1,24 @@
+<<<<<<< HEAD
 public class Conversor<T> {
+=======
+import java.util.Stack;
+
+public class Conversor {
+
+    Stack operaciones;
+    Stack convertidas;
+    public void leer()
+    {
+        File doc = new File("");
+        Scanner obj = new Scanner(doc);
+        while (obj.hasNextLine())
+          operaciones.push(obj);
+        for(int i =0; i <operaciones.size();i++){
+            convertidas.push(InfixaPostfix(operaciones.pop()));
+        }
+    }
+    public static String InfixaPostfix(String op){
+>>>>>>> bc57ab512dd0a2e4ee919bcab01e9122705480e7
 
     public String InfaPst(String op){
         String r = "";
