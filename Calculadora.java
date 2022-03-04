@@ -1,7 +1,4 @@
-package src.Calculator;
 import java.util.Arrays;
-import src.Stack.StackArrayList;
-import src.Exceptions.*;
 public class Calculadora implements IPosfixCalc {
     
     StackArrayList<Integer> Stack = new StackArrayList<Integer>();

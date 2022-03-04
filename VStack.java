@@ -1,6 +1,6 @@
 import java.util.Vector;
 
-public class VStack<T> extends Stack{
+public class VStack<T> extends Stack<T>{
     private Vector<T> vector;
 
     public VStack(){

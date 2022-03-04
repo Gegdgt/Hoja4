@@ -1,14 +1,11 @@
 import java.util.ArrayList;
-/**
- * @author moises.alonso
- *
- */
-public class ALStack<T> extends Stack {
 
-	private ArrayList<T> coreList;
+public class ALStack<T> extends Stack<T> {
+
+	private ArrayList<T> array;
 	
 	public ALStack() {
-		coreList = new ArrayList<T>();
+		array = new ArrayList<T>();
 	}
 	
 	
@@ -18,7 +15,7 @@ public class ALStack<T> extends Stack {
 	 */
 	@Override
 	public void push(T value) {		
-		coreList.add(0, value);
+		array.add(0, value);
 	}
 
 	
@@ -28,7 +25,7 @@ public class ALStack<T> extends Stack {
 	 */
 	@Override
 	public T pull() {
-		return coreList.remove(0);
+		return array.remove(0);
 	}
 
 	
@@ -38,7 +35,7 @@ public class ALStack<T> extends Stack {
 	 */
 	@Override
 	public T peek() {
-		return coreList.get(0);
+		return array.get(0);
 	}
 
 	
@@ -48,7 +45,7 @@ public class ALStack<T> extends Stack {
 	 */
 	@Override
 	public int count() {
-		return coreList.size();
+		return array.size();
 	}
 
 	
@@ -58,7 +55,7 @@ public class ALStack<T> extends Stack {
 	 */
 	@Override
 	public boolean isEmpty() {		
-		return coreList.isEmpty();
+		return array.isEmpty();
 	}
 
 }

@@ -1,3 +1,3 @@
-public abstract class Stack<T> implements IStack{
+public abstract class Stack<T> implements IStack<T>{
     
 }
