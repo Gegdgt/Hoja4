@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class Calculadora implements IPosfixCalc {
+public class Calculator implements IPosfixCalc {
     
     StackArrayList<Integer> Stack = new StackArrayList<Integer>();
     
@@ -30,7 +30,7 @@ public class Calculadora implements IPosfixCalc {
                         int n = Stack.pull();
                         int n1 = Stack.pull();
                         if(n1 == 0){
-                            throw new DivideByZero("No es posible realizar una división entre cero.");
+                            throw new Exception();
                         }
                         else Stack.push(n/n1);;
                     }
