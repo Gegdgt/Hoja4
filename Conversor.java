@@ -1,6 +1,20 @@
+import java.util.Stack;
+
 public class Conversor {
 
-    public static String InfaPst(String op){
+    Stack operaciones;
+    Stack convertidas;
+    public void leer()
+    {
+        File doc = new File("");
+        Scanner obj = new Scanner(doc);
+        while (obj.hasNextLine())
+          operaciones.push(obj);
+        for(int i =0; i <operaciones.size();i++){
+            convertidas.push(InfixaPostfix(operaciones.pop()));
+        }
+    }
+    public static String InfixaPostfix(String op){
 
         String r = "";
         Stack stack = new Stack();
