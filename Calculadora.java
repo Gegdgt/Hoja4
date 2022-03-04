@@ -7,7 +7,6 @@ public class Calculadora implements IPosfixCalc {
     /** 
      * @param expresion in posfix
      * @return int Result of the hole expresion
-     * @throws DivideByZero, IncorrectOperator, InsufficientOperands
      */
     public int Evaluate(String expresion){
         String[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
@@ -35,9 +34,9 @@ public class Calculadora implements IPosfixCalc {
                         }
                         else Stack.push(n/n1);;
                     }
-                    else throw new IncorrectOperator("Operador desconocido.");
+                    else throw new Exception();
                 }
-                else throw new InsufficientOperands("No hay operandos suficientes.");
+                else throw new Exception();
             }
             return Stack.pull();
         }
