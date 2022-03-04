@@ -1,8 +1,6 @@
 import java.util.Arrays;
 public class Calculator implements IPosfixCalc {
     
-    StackArrayList<Integer> Stack = new StackArrayList<Integer>();
-    
     
     /** 
      * @param expresion in posfix
