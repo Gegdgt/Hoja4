@@ -1,10 +1,13 @@
+import java.util.Scanner;
+import java.io.*;
+
 public class Conversor {
 
     Stack operaciones;
     public void leer()
     {
-        File Arch = new File("");
-        Scanner linea = new Scanner(doc);
+        File Arch = new File("datos.txt");
+        Scanner linea = new Scanner(Arch);
         while (linea.hasNextLine()){
           operaciones.push(InfaPst(linea));
         }
