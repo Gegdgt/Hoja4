@@ -1,7 +1,10 @@
 import java.util.Arrays;
 public class Calculator implements IPosfixCalc {
-    
-    
+    Stack<Integer> Stack;
+    StackFactory<Integer> SF = new StackFactory<Integer>();
+    public Calculator(int tipo){
+        Stack = SF.Create(tipo);
+    }
     /** 
      * @param expresion in posfix
      * @return int Result of the hole expresion
