@@ -9,6 +9,7 @@ public class Conversor {
     */
     public Conversor(int tipo){
         operaciones = SF.Create(tipo);
+        leer();
     }
     public Stack<String> operaciones;
     StackFactory<String> SF = new StackFactory<String>();
