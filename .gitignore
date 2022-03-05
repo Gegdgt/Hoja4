@@ -9,3 +9,14 @@
 /Stack.class
 /StackFactory.class
 /VStack.class
+/DoubleLinkedList.class
+/DoubleNode.class
+/IList.class
+/Node.class
+/SingleLinkedList.class
+/StackUsingArrayList.class
+/StackUsingDoubleLinkedList.class
+/StackUsingLinkedList.class
+/MLista.class
+/Lista.class
+/List.class

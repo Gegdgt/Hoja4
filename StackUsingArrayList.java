@@ -1,8 +1,3 @@
-/**
- * 
- */
-package edu.uvg.structures;
-
 import java.util.ArrayList;
 
 /**
