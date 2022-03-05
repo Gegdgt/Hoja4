@@ -2,24 +2,34 @@ import java.util.Scanner;
 import java.io.*;
 
 public class Conversor {
-
+    public Conversor(int tipo){
+        operaciones = SF.Create(tipo);
+    }
     Stack operaciones;
+    StackFactory<String> SF = new StackFactory<String>();
     public void leer()
     {
-        File Arch = new File("datos.txt");
-        Scanner linea = new Scanner(Arch);
-        while (linea.hasNextLine()){
-          operaciones.push(InfaPst(linea));
-        }
+        try {
+            File arch = new File("datos.txt");
+            Scanner leer = new Scanner(arch);
+            while (leer.hasNextLine()) {
+              String data = leer.nextLine();
+              operaciones.push(InfaPst(data));
+            }
+            leer.close();
+          } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+          }
 
     }
     public String InfaPst(String op){
         String r = "";
         Stack<String> stack = null;
         StackFactory<String> st = new StackFactory<String>();
-        stack = st.Create("AL");
+        stack = st.Create(1);
         for (int i = 0; i <op.length() ; i++) {
-            char c = op.charAt(i);
+            String c = Character.toString(op.charAt(i));
             if(jerarquia(c)>0)
             {
                 while(stack.isEmpty()==false && jerarquia(stack.peek())>=jerarquia(c))
@@ -28,16 +38,16 @@ public class Conversor {
                 }
                 stack.push(c);
             }
-            else if(c==')')
+            else if(c==")")
             {
-                char l = stack.pull();
-                while(l!='(')
+                String l = stack.pull();
+                while(l!="(")
                 {
                     r += l;
                     l = stack.pull();
                 }
             }
-            else if(c=='(')
+            else if(c=="(")
             {
                 stack.push(c);
             }
