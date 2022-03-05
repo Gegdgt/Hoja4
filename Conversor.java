@@ -1,5 +1,15 @@
 public class Conversor<T> {
 
+    Stack operaciones;
+    public void leer()
+    {
+        File Arch = new File("");
+        Scanner linea = new Scanner(doc);
+        while (linea.hasNextLine()){
+          operaciones.push(InfaPst(linea));
+        }
+
+    }
     public String InfaPst(String op){
         String r = "";
         Stack<String> stack = null;
