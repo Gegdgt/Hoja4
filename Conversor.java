@@ -1,4 +1,4 @@
-public class Conversor<T> {
+public class Conversor {
 
     Stack operaciones;
     public void leer()
