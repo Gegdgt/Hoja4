@@ -5,7 +5,7 @@ public class Conversor {
     public Conversor(int tipo){
         operaciones = SF.Create(tipo);
     }
-    Stack operaciones;
+    public Stack<String> operaciones;
     StackFactory<String> SF = new StackFactory<String>();
     public void leer()
     {
