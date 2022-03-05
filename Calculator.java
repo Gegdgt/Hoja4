@@ -11,31 +11,42 @@ public class Calculator implements IPosfixCalc {
      * @param expresion in posfix
      * @return int Result of the hole expresion
      */
+    private String[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    private String[] operators = {"+", "-", "*", "/"};
+    private  int number1 = 0, number2 = 0;
     public int Evaluate(String expresion){
-        String[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
         try{
-            for(int i = 0; i < expresion.length(); i++){
-                String l = expresion.substring(i, 1);
-                if(Arrays.asList(numbers).contains(l)){
-                    Stack.push(Integer.parseInt(l));
+        	String[] values = expresion.split(" ");
+            for(int i = 0; i < values.length; i++){
+                if(Arrays.asList(numbers).contains(values[i])){ 
+                    Stack.push(Integer.parseInt(values[i]));
                 }
-                else if (Stack.count() == 2){
-                    if(l.equals("+")){
-                        Stack.push((Stack.pull() + Stack.pull()));
-                    }
-                    else if (l.equals("-")){
-                        Stack.push(Stack.pull() - Stack.pull());
-                    }
-                    else if(l.equals("*")){
-                        Stack.push(Stack.pull() * Stack.pull());
-                    }
-                    else if(l.equals("/")){
-                        int n = Stack.pull();
-                        int n1 = Stack.pull();
-                        if(n1 == 0){
-                            throw new Exception();
+                else if (Arrays.asList(operators).contains(values[i])){
+                	if (Stack.count() == 2){
+                        if(values[i].equals("+")){
+                            number2 = Stack.pull();
+                            number1 = Stack.pull();
+                            Stack.push(number1 + number2);
                         }
-                        else Stack.push(n/n1);;
+                        else if (values[i].equals("-")){
+                        	number2 = Stack.pull();
+                            number1 = Stack.pull();
+                            Stack.push(number1 - number2);
+                        }
+                        else if(values[i].equals("*")){
+                        	number2 = Stack.pull();
+                            number1 = Stack.pull();
+                            Stack.push(number1 * number2);
+                        }
+                        else if(values[i].equals("/")){
+                        	number2 = Stack.pull();
+                            number1 = Stack.pull();
+                            if(number2 == 0){
+                                throw new Exception();
+                            }
+                            else Stack.push(number1/number2);
+                        }
+                        else throw new Exception();
                     }
                     else throw new Exception();
                 }
@@ -45,7 +56,7 @@ public class Calculator implements IPosfixCalc {
         }
         catch(Exception e){
             System.out.println("Error: " + e.getMessage());
-            return -9999;
+            return -99999;
         }
     }
 }
