@@ -1,11 +1,5 @@
 /**
- * 
- */
-
-
-/**
- * @author MAAG
- *
+ * DoubleLinkedList data structure class.
  */
 public class DoubleLinkedList<T> extends List<T> {
 

@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+
+/*
+* The class that implements ArrayList to build a Stack.
+*/
 public class ALStack<T> extends Stack<T> {
 
 	private ArrayList<T> array;

@@ -1,5 +1,14 @@
+/*
+    Factory class for Stacks.
+*/
+
 public class StackFactory<T>  {
     
+    /*
+    Method that creates the stack required
+    @parans int type that represents the type of the stack required
+    @returns a new objetc of the stack type required
+    */
     public Stack<T> Create(int type){
         if(type == 1){
            return new ALStack<T>();

@@ -1,8 +1,8 @@
 /**
- * @author MAAG
- *
+ * The class that implements SingleLinkedList to build a Stack.
  */
-public class StackUsingLinkedList<T> extends Stack<T> {
+
+ public class StackUsingLinkedList<T> extends Stack<T> {
 
 	private SingleLinkedList<T> listaInterna;
 	

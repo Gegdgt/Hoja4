@@ -1,7 +1,6 @@
-/**
- * @author MAAG
- *
- */
+/*
+    SingleLinkedList data structure class.
+*/
 public class SingleLinkedList<T> extends List<T> {
 
 	private int count;

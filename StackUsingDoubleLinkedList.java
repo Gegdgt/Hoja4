@@ -1,6 +1,5 @@
 /**
- * @author MAAG
- *
+ * The class that implements DoubleLinkedList to build a Stack.
  */
 public class StackUsingDoubleLinkedList<T> extends Stack<T> {
 

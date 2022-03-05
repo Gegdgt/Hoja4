@@ -1,12 +1,14 @@
 /**
- * @author MAAG
- *
+ * Class used by DoubleLinkedList to create the structure.
  */
 public class DoubleNode<T> {
 	private T value;
 	private DoubleNode<T> next;
 	private DoubleNode<T> previous;
 	
+	/*
+	*@params T value the value that will be setted.
+	*/
 	public DoubleNode(T value) {
 		this.setValue(value);
 	}
