@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ALStack<T> extends List<T> {
+public class ALStack<T> extends Stack<T> {
 
 	private ArrayList<T> array;
 	
