@@ -1,8 +1,3 @@
-/**
- * @author moises.alonso
- *
- */
-
 public interface IPosfixCalc {
 
 	/***

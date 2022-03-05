@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 
 /*
-* Es la clase que emplea ArrayList para crear un Stack.
+* The class that implements ArrayList to build a Stack.
 */
 public class ALStack<T> extends Stack<T> {
 

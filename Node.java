@@ -1,6 +1,6 @@
+
 /**
- * @author MAAG
- *
+ * Class used by SingleLinkedList to create the structure.
  */
 public class Node<T> {
 	private T value;

@@ -1,5 +1,8 @@
 import java.util.Vector;
 
+/*
+    The class that implements Vector to build a Stack.
+*/
 public class VStack<T> extends Stack<T>{
     private Vector<T> vector;
 

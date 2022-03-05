@@ -2,11 +2,20 @@ import java.util.Scanner;
 import java.io.*;
 
 public class Conversor {
+
+    /*
+    * Construct of the class that generates the stack
+    * @params type of the stack used as param again in the Factory
+    */
     public Conversor(int tipo){
         operaciones = SF.Create(tipo);
     }
     public Stack<String> operaciones;
     StackFactory<String> SF = new StackFactory<String>();
+
+    /*
+    * Method that will read the file "datos.txt"
+    */
     public void leer()
     {
         try {
@@ -23,6 +32,12 @@ public class Conversor {
           }
 
     }
+
+    /*
+    * Method that will convert an expresion in infix to postfix
+    * @params String op that has the operation to convert
+    * @returns the operation converted to postfix
+    */
     public String InfaPst(String op){
         String r = "";
         Stack<String> stack = null;
@@ -61,6 +76,12 @@ public class Conversor {
         }
         return r;
     }
+
+    /*
+    * Method that gets the hierarchy of the operator
+    * @params String x that is the operator to be evaluated
+    * @returns the hierarchy of the operator in a numeric value
+    */
     public int jerarquia(String c){
         switch (c){
             case "+":

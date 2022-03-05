@@ -6,6 +6,9 @@ public class DoubleNode<T> {
 	private DoubleNode<T> next;
 	private DoubleNode<T> previous;
 	
+	/*
+	*@params T value the value that will be setted.
+	*/
 	public DoubleNode(T value) {
 		this.setValue(value);
 	}
