@@ -2,7 +2,7 @@
  * @author MAAG
  *
  */
-public class StackUsingLinkedList<T> implements IStack<T> {
+public class StackUsingLinkedList<T> extends Stack<T> {
 
 	private SingleLinkedList<T> listaInterna;
 	

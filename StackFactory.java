@@ -8,7 +8,10 @@ public class StackFactory<T>  {
             return new VStack<T>();
         }
         else if(type == 3){
-            return new LStack<T>();
+            return new StackUsingLinkedList<T>();
+        }
+        else if(type == 4){
+            return new StackUsingDoubleLinkedList<T>();
         }
         else{
             return null;

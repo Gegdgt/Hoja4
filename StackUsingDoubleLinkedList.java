@@ -2,7 +2,7 @@
  * @author MAAG
  *
  */
-public class StackUsingDoubleLinkedList<T> implements IStack<T> {
+public class StackUsingDoubleLinkedList<T> extends Stack<T> {
 
 	private DoubleLinkedList<T> listaInterna;
 	

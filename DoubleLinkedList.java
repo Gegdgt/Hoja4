@@ -7,7 +7,7 @@
  * @author MAAG
  *
  */
-public class DoubleLinkedList<T> implements IList<T> {
+public class DoubleLinkedList<T> extends List<T> {
 
 	private DoubleNode<T> start;
 	private DoubleNode<T> end;
