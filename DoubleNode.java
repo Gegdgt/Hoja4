@@ -1,6 +1,5 @@
 /**
- * @author MAAG
- *
+ * Class used by DoubleLinkedList to create the structure.
  */
 public class DoubleNode<T> {
 	private T value;

@@ -2,6 +2,8 @@ import java.util.Arrays;
 public class Calculator implements IPosfixCalc {
     Stack<Integer> Stack;
     StackFactory<Integer> SF = new StackFactory<Integer>();
+
+    //Constructor where the stack is created
     public Calculator(int tipo){
         Stack = SF.Create(tipo);
     }
