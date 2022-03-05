@@ -7,5 +7,9 @@ public class Controlador {
         int type = scan.nextInt();
         Calculator calculadora = new Calculator(type);
         Conversor convert = new Conversor(type);
+        for(int i=0;i<convert.operaciones.count();i++){
+            String op=convert.operaciones.pull();
+            System.out.println("El resultado de: "+op+" Es: "+calculadora.Evaluate(op));
+        }
     }
 }
